@@ -1,3 +1,8 @@
+package business.object;
+
+import enums.JobTitle;
+import enums.Shift;
+
 import java.util.Date;
 
 

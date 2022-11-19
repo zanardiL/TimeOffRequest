@@ -1,3 +1,5 @@
+import requests.TimeOffRequest;
+
 import java.util.Date;
 
 public class ManageRequests implements TimeOffRequest {

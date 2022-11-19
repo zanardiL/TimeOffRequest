@@ -1,3 +1,7 @@
+package business.object;
+
+import enums.Shift;
+
 public class Manager {
     private String name;
     private String id;
