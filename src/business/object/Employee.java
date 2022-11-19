@@ -3,7 +3,8 @@ package business.object;
 import enums.JobTitle;
 import enums.Shift;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 public class Employee {
@@ -11,20 +12,18 @@ public class Employee {
     private String id;
     private JobTitle jobTitle;
     private Shift shift;
-    private Date hiringDate;
+    private LocalDate hiringDate;
 
     public Employee(
             String name,
             String id,
             JobTitle jobTitle,
-            Shift shift,
-            Date hiringDate
+            Shift shift
     ) {
         this.name = name;
         this.id = id;
         this.jobTitle = jobTitle;
         this.shift = shift;
-        this.hiringDate = hiringDate;
     }
 
     public String getName() {
@@ -59,11 +58,11 @@ public class Employee {
         this.shift = shift;
     }
 
-    public Date getHiringDate() {
+    public LocalDate getHiringDate() {
         return hiringDate;
     }
 
-    public void setHiringDate(Date hiringDate) {
+    public void setHiringDate(LocalDate hiringDate) {
         this.hiringDate = hiringDate;
     }
 }
