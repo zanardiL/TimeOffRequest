@@ -1,7 +1,7 @@
 package enums;
 
 public enum JobTitle {
-    MOVER,
-    DISTRIBUITION_LOGISTIC_OPERATOR,
-    RECEIVING_INSPECTOR
+    DATA_ANALYST,
+    BACKEND_DEVELOPER,
+    SQUAD_LEADER
 }

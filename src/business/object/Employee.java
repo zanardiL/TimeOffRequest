@@ -9,19 +9,17 @@ import java.time.LocalDateTime;
 
 public class Employee {
     private String name;
-    private String id;
     private JobTitle jobTitle;
     private Shift shift;
     private LocalDate hiringDate;
+    private int daysOffAvaiable;
 
     public Employee(
             String name,
-            String id,
             JobTitle jobTitle,
             Shift shift
     ) {
         this.name = name;
-        this.id = id;
         this.jobTitle = jobTitle;
         this.shift = shift;
     }
@@ -32,14 +30,6 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public JobTitle getJobTitle() {
@@ -62,7 +52,15 @@ public class Employee {
         return hiringDate;
     }
 
+    public int getDaysOffAvaiable() {
+        return daysOffAvaiable;
+    }
+
+    public void setDaysOffAvaiable(int daysOffAvaiable) {
+        this.daysOffAvaiable = daysOffAvaiable;
+    }
     public void setHiringDate(LocalDate hiringDate) {
         this.hiringDate = hiringDate;
     }
+
 }

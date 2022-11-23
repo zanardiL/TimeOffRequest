@@ -1,10 +1,10 @@
-package requests.rules;
+package requests.requirements;
 
 import business.object.Employee;
 import requests.TimeOffRequest;
 
-public interface RequestsRules {
+public interface RequirementsByLaw {
     boolean minimumRequirementsByLaw(TimeOffRequest timeOffRequest, Employee employee);
-    boolean minimumRequirementsByCompanyPolicy(TimeOffRequest timeOffRequest, Employee employee);
+
 
 }

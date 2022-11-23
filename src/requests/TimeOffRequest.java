@@ -10,15 +10,6 @@ public class TimeOffRequest {
     private LocalDate startPeriod;
     private LocalDate endPeriod;
 
-    public TimeOffRequest(
-            RequestsNature requestsNature,
-            LocalDate startPeriod,
-            LocalDate endPeriod
-    ) {
-        this.requestsNature = requestsNature;
-        this.startPeriod = startPeriod;
-        this.endPeriod = endPeriod;
-    }
 
     public RequestsNature getRequestsNature() {
         return requestsNature;
