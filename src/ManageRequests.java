@@ -1,4 +1,4 @@
-//import requests.TimeOffRequest;
+//import requests.types.TimeOffRequest;
 //
 //import java.util.Date;
 //

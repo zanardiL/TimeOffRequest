@@ -1,7 +1,6 @@
 package requests.types;
 
 import business.object.Employee;
-import requests.TimeOffRequest;
 import requests.requirements.RequirementsByCompanyPolicy;
 import requests.requirements.RequirementsByLaw;
 
@@ -12,6 +11,10 @@ import java.time.temporal.ChronoUnit;
 public class MaternityLeave
         extends TimeOffRequest
         implements RequirementsByLaw, RequirementsByCompanyPolicy {
+    public MaternityLeave(LocalDate startPeriod, LocalDate endPeriod, Employee employee) {
+        super(startPeriod, endPeriod, employee);
+    }
+
     /*
      * A funcionária tem direito a 120 dias de licença maternidade.
      * A licença tem início 28 dias antes da data do parto

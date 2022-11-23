@@ -1,17 +1,21 @@
 package requests.types;
 
 import business.object.Employee;
-import requests.TimeOffRequest;
+import enums.RequestsNature;
 import requests.requirements.RequirementsByCompanyPolicy;
 import requests.requirements.RequirementsByLaw;
 
-import java.sql.Time;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class AnnualLeave
         extends TimeOffRequest
         implements RequirementsByLaw, RequirementsByCompanyPolicy {
+
+    public AnnualLeave(LocalDate startPeriod, LocalDate endPeriod, Employee employee) {
+        super(startPeriod, endPeriod, employee);
+        setRequestsNature(RequestsNature.ANNUAL_LEAVE);
+    }
 
     /**
      * O funcionário tem direito a 30 dias de férias 12 meses após ser contratado,
@@ -68,13 +72,15 @@ public class AnnualLeave
         if(employee1.getJobTitle().equals(employee2.getJobTitle()) && (employee1.getShift().equals(employee2.getShift()))) {
             return isOverlapping(timeOffRequest1, timeOffRequest2);
         }
+        return false;
     }
 
     public static boolean isOverlapping(TimeOffRequest timeOffRequest, TimeOffRequest timeOffRequest2) {
-        if(timeOffRequest.getEndPeriod().isBefore(timeOffRequest2.getStartPeriod()) {
+        if(timeOffRequest.getEndPeriod().isBefore(timeOffRequest2.getStartPeriod())) {
             return false;
         } else {
             return true;
         }
     }
+
 }

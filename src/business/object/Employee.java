@@ -4,7 +4,6 @@ import enums.JobTitle;
 import enums.Shift;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 
 public class Employee {
@@ -12,16 +11,17 @@ public class Employee {
     private JobTitle jobTitle;
     private Shift shift;
     private LocalDate hiringDate;
-    private int daysOffAvaiable;
+
 
     public Employee(
             String name,
             JobTitle jobTitle,
-            Shift shift
+            Shift shift,
+            LocalDate hiringDate
     ) {
         this.name = name;
-        this.jobTitle = jobTitle;
         this.shift = shift;
+        this.hiringDate = hiringDate;
     }
 
     public String getName() {
@@ -52,15 +52,17 @@ public class Employee {
         return hiringDate;
     }
 
-    public int getDaysOffAvaiable() {
-        return daysOffAvaiable;
-    }
-
-    public void setDaysOffAvaiable(int daysOffAvaiable) {
-        this.daysOffAvaiable = daysOffAvaiable;
-    }
     public void setHiringDate(LocalDate hiringDate) {
         this.hiringDate = hiringDate;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", jobTitle=" + jobTitle +
+                ", shift=" + shift +
+                ", hiringDate=" + hiringDate +
+                '}';
+    }
 }
